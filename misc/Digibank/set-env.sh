@@ -2,13 +2,14 @@
 # Part of a online course. Please check it out at http://www.acloudfan.com
 
 # EDIT THIS To Control the Peer Setup
-export ORDERER_ADDRESS=3.16.183.82:7050
+export ORDERER_ADDRESS=18.220.118.116:7050
 
 export FABRIC_LOGGING_SPEC=info
 
-export CORE_PEER_LOCALMSPID=<<CHANGE THIS>>
+export CORE_PEER_LOCALMSPID=DigibankMSP
 
-export CORE_PEER_ID=acme-peer1
+export CORE_PEER_ID=digibank-peer1
 
+export PEER_ORG=digibank
 # Admin identity used for commands
-export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/acme/admin/msp
+export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp

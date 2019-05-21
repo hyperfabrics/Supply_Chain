@@ -9,4 +9,4 @@ export ORDERER_GENERAL_LOGLEVEL=debug
 
 export FABRIC_CFG_PATH=$PWD
 
-orderer
+orderer 2> ./ledger/orderer.log  &
