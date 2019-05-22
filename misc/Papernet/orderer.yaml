@@ -54,11 +54,11 @@ General:
 
     # TLS: TLS settings for the GRPC server.
     TLS:
-        Enabled: false
-        PrivateKey: ./server.key
-        Certificate: ./server.crt
+        Enabled: true
+        PrivateKey: ./TLS/server.key
+        Certificate: ./TLS/server.crt
         RootCAs:
-          - ./ca.crt
+          - ./TLS/ca.crt
         ClientAuthRequired: false
         ClientRootCAs:
 
@@ -69,7 +69,7 @@ General:
     #LogLevel: info
 
     # Log Format:  The format string to use when logging.  Especially useful to disable color logging
-    LogFormat: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
+    #LogFormat: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
 
 
 
