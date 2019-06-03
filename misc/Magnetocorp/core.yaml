@@ -34,7 +34,7 @@ logging:
     # Default for all modules running within the scope of a peer.
     # Note: this value is only used when --logging-level or CORE_LOGGING_LEVEL
     #       are not set
-    level:       debug
+    #level:       debug
 
     # The overall default values mentioned above can be overridden for the
     # specific components listed in the override section below.
@@ -280,18 +280,18 @@ peer:
         clientAuthRequired: false
         # X.509 certificate used for TLS server
         cert:
-            file: ./tls/server.crt
+            file: ./fabric-ca/tls/server.crt
         # Private key used for TLS server (and client if clientAuthEnabled
         # is set to true
         key:
-            file: ./tls/server.key
+            file: ./fabric-ca/tls/server.key
         # Trusted root certificate chain for tls.cert
         rootcert:
-            file: ./tls/ca.crt
+            file: ./fabric-ca/tls/ca.crt
         # Set of root certificate authorities used to verify client certificates
         clientRootCAs:
             files:
-              - ./tls/ca.crt
+              - ./fabric-ca/tls/ca.crt
         # Private key used for TLS when making client connections.  If
         # not set, peer.tls.key.file will be used instead
         clientKey:

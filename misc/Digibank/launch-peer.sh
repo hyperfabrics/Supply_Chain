@@ -9,4 +9,6 @@ export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/$PEER_ORG/$CORE_PEER_ID/msp
 
 #peer node start -o $ORDERER_ADDRESS
 
+mkdir -p ./ledger
+
 peer node start 2>./ledger/$CORE_PEER_ID.log  &

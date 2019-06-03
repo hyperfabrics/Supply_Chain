@@ -55,10 +55,10 @@ General:
     # TLS: TLS settings for the GRPC server.
     TLS:
         Enabled: true
-        PrivateKey: ./TLS/server.key
-        Certificate: ./TLS/server.crt
+        PrivateKey: ./fabric-ca/tls/server.key
+        Certificate: ./fabric-ca/tls/server.crt
         RootCAs:
-          - ./TLS/ca.crt
+          - ./fabric-ca/tls/ca.crt
         ClientAuthRequired: false
         ClientRootCAs:
 
