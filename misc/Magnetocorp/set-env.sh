@@ -6,10 +6,10 @@ export ORDERER_ADDRESS=18.224.25.94:7050
 
 export FABRIC_LOGGING_SPEC=info
 
-export CORE_PEER_LOCALMSPID=DigibankMSP
+export CORE_PEER_LOCALMSPID=MagnetocorpMSP
 
-export CORE_PEER_ID=digibank-peer1
+export CORE_PEER_ID=magnetocorp-peer1
 
-export PEER_ORG=digibank
+export PEER_ORG=magnetocorp
 # Admin identity used for commands
-export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp
+export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/magnetocorp/admin/msp
