@@ -14,5 +14,10 @@ fuser -n tcp -k 5984
 
 rm ./*.log  2> /dev/null
 
+docker kill $(docker ps -q)
+
+docker rm $(docker ps -a -q)
+
+
 echo "done"
 
