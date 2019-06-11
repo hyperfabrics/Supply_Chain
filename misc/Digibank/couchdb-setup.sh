@@ -2,6 +2,9 @@ sudo apt install apache2 -y
 
 sudo ufw allow 'Apache'
 
+echo "deb https://apache.bintray.com/couchdb-deb {xenial} main" \
+    | sudo tee -a /etc/apt/sources.list
+
 
 curl -L https://couchdb.apache.org/repo/bintray-pubkey.asc \
     | sudo apt-key add -
@@ -33,7 +36,7 @@ sleep 2
 
 source  ./configure
 
-gmake release ERL_CFLAGS="-I/usr/local/include/js -I/usr/local/lib/erlang/usr/include"
+make release ERL_CFLAGS="-I/usr/local/include/js -I/usr/local/lib/erlang/usr/include"
 
 
 
