@@ -52,8 +52,8 @@ export CC_PATH="./contract"
 export CC_VERSION="1.0"
 export CC_CHANNEL_ID="commercialpaperchannel"
 
-"Setting the Orderer to 18.224.25.94:7050"
-ORDERER_ADDRESS="18.224.25.94:7050"
+"Setting the Orderer to 18.224.25.94:7060"
+ORDERER_ADDRESS="18.224.25.94:7060"
 
 echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
 
