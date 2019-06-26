@@ -30,6 +30,7 @@ gen-gensis-channel-artifects.sh to generate genesis blocks
 
 gen-crypto-identiies to generate peer tar files
 
+NOTE: To check ports: sudo netstat -tulpn | grep LISTEN
 
 
 Orderer Setup:
