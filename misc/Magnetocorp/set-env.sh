@@ -3,7 +3,7 @@
 
 # EDIT THIS To Control the Peer Setup
 export PEER_ORG=magnetocorp
-export ORDERER_ADDRESS=18.220.137.253:7060
+export ORDERER_ADDRESS=18.220.137.253:7050
 
 export TLS_CA_FILE="./fabric-ca/client/magnetocorp/tls/ca.crt"
 export TLS_CERT_FILE="./fabric-ca/client/magnetocorp/tls/server.crt"
