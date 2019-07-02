@@ -46,13 +46,13 @@ logging:
     # Note: the modules listed below are the only acceptable modules at this
     #       time.
     cauthdsl:   warning
-    gossip:     warning
-    grpc:       error
+    gossip:     info
+    grpc:       debug
     ledger:     info
     msp:        warning
     policies:   warning
     peer:
-        gossip: warning
+        gossip: info
 
     # Message format for the peer logs
     format: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
@@ -146,7 +146,7 @@ peer:
         # connection with ordering service and use delivery protocol
         # to pull ledger blocks from ordering service. It is recommended to
         # use leader election for large networks of peers.
-        useLeaderElection: true
+        useLeaderElection: false
         # Statically defines peer to be an organization "leader",
         # where this means that current peer will maintain connection
         # with ordering service and disseminate block across peers in
@@ -273,25 +273,25 @@ peer:
     # not mutual TLS auth. See comments on chaincodeListenAddress for more info
     tls:
         # Require server-side TLS
-        enabled:  true
+        enabled:  false
         # Require client certificates / mutual TLS.
         # Note that clients that are not configured to use a certificate will
         # fail to connect to the peer.
         clientAuthRequired: false
         # X.509 certificate used for TLS server
         cert:
-            file: ./fabric-ca/client/digibank/tls/server.crt
+            file: ./fabric-ca/client/magnetocorp/tls/server.crt
         # Private key used for TLS server (and client if clientAuthEnabled
         # is set to true
         key:
-            file: ./fabric-ca/client/digibank/tls/server.key
+            file: ./fabric-ca/client/magnetocorp/tls/server.key
         # Trusted root certificate chain for tls.cert
         rootcert:
-            file: ./fabric-ca/client/digibank/tls/ca.crt
+            file: ./fabric-ca/client/magnetocorp/tls/ca.crt
         # Set of root certificate authorities used to verify client certificates
         clientRootCAs:
             files:
-              - ./fabric-ca/client/digibank/tls/ca.crt
+              - ./fabric-ca/client/magnetocorp/tls/ca.crt
         # Private key used for TLS when making client connections.  If
         # not set, peer.tls.key.file will be used instead
         clientKey:
@@ -342,7 +342,7 @@ peer:
                 KeyStore:
 
     # Path on the file system where peer will find MSP local configurations
-    mspConfigPath: ./fabric-ca/client/digibank/admin/msp
+    mspConfigPath: ./fabric-ca/client/magnetocorp/admin/msp
 
     # Identifier of the local MSP
     # ----!!!!IMPORTANT!!!-!!!IMPORTANT!!!-!!!IMPORTANT!!!!----
@@ -351,7 +351,7 @@ peer:
     # to match the name of one of the MSPs in each of the channel
     # that this peer is a member of. Otherwise this peer's messages
     # will not be identified as valid by other nodes.
-    localMspId: DigibankMSP
+    localMspId: MagnetocorpMSP
 
     # CLI common client config options
     client:
@@ -639,14 +639,14 @@ ledger:
        # not map the CouchDB container port to a server port in docker-compose.
        # Otherwise proper security must be provided on the connection between
        # CouchDB client (on the peer) and server.
-       couchDBAddress: 127.0.0.1:5984
+      # couchDBAddress: 127.0.0.1:5984
        # This username must have read and write authority on CouchDB
-       username:
+      # username:
        # The password is recommended to pass as an environment variable
        # during start up (eg LEDGER_COUCHDBCONFIG_PASSWORD).
        # If it is stored here, the file must be access control protected
        # to prevent unintended users from discovering the password.
-       password:
+       #password:
        # Number of retries for CouchDB errors
        maxRetries: 3
        # Number of retries for CouchDB errors during peer startup

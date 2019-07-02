@@ -5,9 +5,9 @@
 export PEER_ORG=digibank
 export ORDERER_ADDRESS=3.18.220.116:7050
 
-export TLS_CA_FILE="./fabric-ca/client/digibank/tls/ca.crt"
-export TLS_CERT_FILE="./fabric-ca/client/digibank/tls/server.crt"
-export TLS_KEY_FILE="./fabric-ca/client/digibank/tls/server.key"
+#export TLS_CA_FILE="./fabric-ca/client/digibank/tls/ca.crt"
+#export TLS_CERT_FILE="./fabric-ca/client/digibank/tls/server.crt"
+#export TLS_KEY_FILE="./fabric-ca/client/digibank/tls/server.key"
 
 
 export FABRIC_LOGGING_SPEC=info
@@ -15,12 +15,6 @@ export FABRIC_LOGGING_SPEC=info
 export CORE_PEER_LOCALMSPID=DigibankMSP
 
 export CORE_PEER_ID=digibank-peer1
-
-
-#export CORE_PEER_GOSSIP_EXTERNALENDPOINT=0.0.0.0:7051
-
-#export CORE_PEER_GOSSIP_BOOTSTRAP=0.0.0.0:7051
-
 
 # Admin identity used for commands
 export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp
