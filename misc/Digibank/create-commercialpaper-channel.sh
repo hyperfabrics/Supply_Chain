@@ -9,4 +9,4 @@ source  ./set-env.sh
 export CHANNEL_TX_FILE=./commercialpaper-channel.tx
 
 # Execute the channel create command
-peer channel create --catfile $TLS_CA_FILE --certfile $TLS_CERT_FILE --keyfile $TLS_KEY_FILE -o $ORDERER_ADDRESS --tls -c commercialpaperchannel -f $CHANNEL_TX_FILE
+peer channel create -o $ORDERER_ADDRESS -c commercialpaperchannel -f $CHANNEL_TX_FILE

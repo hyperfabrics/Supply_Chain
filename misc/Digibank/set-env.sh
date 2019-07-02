@@ -17,5 +17,10 @@ export CORE_PEER_LOCALMSPID=DigibankMSP
 export CORE_PEER_ID=digibank-peer1
 
 
+#export CORE_PEER_GOSSIP_EXTERNALENDPOINT=0.0.0.0:7051
+
+#export CORE_PEER_GOSSIP_BOOTSTRAP=0.0.0.0:7051
+
+
 # Admin identity used for commands
 export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp
