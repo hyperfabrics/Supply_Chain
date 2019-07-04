@@ -1,21 +1,15 @@
-# Copyright 2018 @ http://ACloudFan.com 
-# Part of a online course. Please check it out at http://www.acloudfan.com
-
 # EDIT THIS To Control the Peer Setup
 export PEER_ORG=magnetocorp
+
 export ORDERER_ADDRESS=3.18.220.116:7050
 
-export TLS_CA_FILE="./fabric-ca/client/magnetocorp/tls/ca.crt"
-export TLS_CERT_FILE="./fabric-ca/client/magnetocorp/tls/server.crt"
-export TLS_KEY_FILE="./fabric-ca/client/magnetocorp/tls/server.key"
-
+export FABRIC_CFG_PATH=$PWD
 
 export FABRIC_LOGGING_SPEC=info
 
 export CORE_PEER_LOCALMSPID=MagnetocorpMSP
 
 export CORE_PEER_ID=magnetocorp-peer1
-
 
 # Admin identity used for commands
 export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/magnetocorp/admin/msp

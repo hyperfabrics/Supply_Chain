@@ -1,14 +1,9 @@
-# Copyright 2018 @ http://ACloudFan.com 
-# Part of a online course. Please check it out at http://www.acloudfan.com
-
 # EDIT THIS To Control the Peer Setup
 export PEER_ORG=digibank
+
 export ORDERER_ADDRESS=3.18.220.116:7050
 
-#export TLS_CA_FILE="./fabric-ca/client/digibank/tls/ca.crt"
-#export TLS_CERT_FILE="./fabric-ca/client/digibank/tls/server.crt"
-#export TLS_KEY_FILE="./fabric-ca/client/digibank/tls/server.key"
-
+export FABRIC_CFG_PATH=$PWD
 
 export FABRIC_LOGGING_SPEC=info
 
