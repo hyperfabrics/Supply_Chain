@@ -1,7 +1,7 @@
 # EDIT THIS To Control the Peer Setup
 export PEER_ORG=digibank
 
-export ORDERER_ADDRESS=3.18.220.116:7050
+export ORDERER_ADDRESS=3.17.157.23:7050
 
 export FABRIC_CFG_PATH=$PWD
 

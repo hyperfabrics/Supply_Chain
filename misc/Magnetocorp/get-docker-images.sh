@@ -11,7 +11,7 @@ VERSION=1.3.0
 BASE_DOCKER_TAG=amd64-0.4.13
 
 # set of Hyperledger Fabric images
-FABRIC_IMAGES=(fabric-peer fabric-orderer fabric-ccenv fabric-tools)
+FABRIC_IMAGES=(fabric-peer fabric-orderer fabric-ccenv  fabric-tools)
 
 for image in ${FABRIC_IMAGES[@]}; do
   echo "Pulling ${DOCKER_NS}/$image:${ARCH}-${VERSION}"
